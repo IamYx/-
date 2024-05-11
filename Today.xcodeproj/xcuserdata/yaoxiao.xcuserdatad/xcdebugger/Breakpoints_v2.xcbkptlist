@@ -21,8 +21,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "uname"
                   moduleName = "libsystem_c.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
+                  usesParentBreakpointCondition = "Yes">
                </Location>
             </Locations>
          </BreakpointContent>

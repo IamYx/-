@@ -43,14 +43,6 @@
 	<array>
 		<string>audio</string>
 	</array>
-	<key>NSSupportsLiveActivities</key>
-	<true/>
-	<key>NSSupportsLiveActivitiesFrequentUpdates</key>
-	<true/>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>灵动岛</string>
-	<key>LSSupportsOpeningDocumentsInPlace</key>
-	<true/>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 </dict>

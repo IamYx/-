@@ -888,12 +888,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 569GNZ5392;
+				DEVELOPMENT_TEAM = 2G64RJAF67;
 				GCC_PREFIX_HEADER = Today/TodayPrefixHeader.h;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Today/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "音视频";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "灵动岛";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -905,7 +908,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.meeting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.today123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Today/Today-Bridging-Header.h";
@@ -924,12 +927,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 569GNZ5392;
+				DEVELOPMENT_TEAM = 2G64RJAF67;
 				GCC_PREFIX_HEADER = Today/TodayPrefixHeader.h;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Today/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "音视频";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "灵动岛";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -941,7 +947,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.meeting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.today123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Today/Today-Bridging-Header.h";
@@ -958,7 +964,7 @@
 				CODE_SIGN_ENTITLEMENTS = TodayWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 569GNZ5392;
+				DEVELOPMENT_TEAM = 2G64RJAF67;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TodayWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TodayWidget;
@@ -970,7 +976,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.meeting.TodayWidget2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.today123.TodayWidget2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -987,7 +993,7 @@
 				CODE_SIGN_ENTITLEMENTS = TodayWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 569GNZ5392;
+				DEVELOPMENT_TEAM = 2G64RJAF67;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TodayWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TodayWidget;
@@ -999,7 +1005,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.meeting.TodayWidget2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.today123.TodayWidget2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
