@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A836DCA72BF1FD710099CE5B /* IMG_1187.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A836DCA62BF1FD710099CE5B /* IMG_1187.JPG */; };
 		A8455E832A5E922B00B0CA13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8455E822A5E922B00B0CA13 /* AppDelegate.swift */; };
 		A8455E852A5E922B00B0CA13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8455E842A5E922B00B0CA13 /* SceneDelegate.swift */; };
 		A8455E872A5E922B00B0CA13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8455E862A5E922B00B0CA13 /* ViewController.swift */; };
@@ -108,6 +109,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A836DCA62BF1FD710099CE5B /* IMG_1187.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1187.JPG; sourceTree = "<group>"; };
 		A8455E7F2A5E922B00B0CA13 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8455E822A5E922B00B0CA13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8455E842A5E922B00B0CA13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				A8455E8B2A5E922C00B0CA13 /* Assets.xcassets */,
 				A8455E8D2A5E922C00B0CA13 /* LaunchScreen.storyboard */,
 				A8455E902A5E922C00B0CA13 /* Info.plist */,
+				A836DCA62BF1FD710099CE5B /* IMG_1187.JPG */,
 				A875FECB2A691DC1008ED579 /* TodayPrefixHeader.h */,
 			);
 			path = Today;
@@ -636,6 +639,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A836DCA72BF1FD710099CE5B /* IMG_1187.JPG in Resources */,
 				A8455E8F2A5E922C00B0CA13 /* LaunchScreen.storyboard in Resources */,
 				A8455E8C2A5E922C00B0CA13 /* Assets.xcassets in Resources */,
 				A875FF032A692B36008ED579 /* MJRefresh.bundle in Resources */,

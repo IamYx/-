@@ -7,6 +7,7 @@
 
 import UIKit
 import AVKit
+import MediaPlayer
 
 class MusicListCell: UITableViewCell {
     
@@ -144,6 +145,9 @@ class MainViewController: ViewController, UITableViewDelegate, UITableViewDataSo
         } else {
             // Fallback on earlier versions
         }
+        
+        //显示在锁屏页面
+        updateLockScreen(model: model)
     }
 
     lazy var mTableView: UITableView = {
@@ -163,7 +167,7 @@ class MainViewController: ViewController, UITableViewDelegate, UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        mPRemoteCommandCenterSet()
         // Do any additional setup after loading the view.
     }
     
@@ -328,6 +332,56 @@ class MainViewController: ViewController, UITableViewDelegate, UITableViewDataSo
             }
         }
         
+    }
+    
+    func updateLockScreen(model : MusicModel) {
+        
+        let mediaCenter = MPNowPlayingInfoCenter.default()
+        let mediaInfo = [MPMediaItemPropertyTitle: model.name, MPMediaItemPropertyArtist: model.author] as [String : Any]
+        mediaCenter.nowPlayingInfo = mediaInfo
+        // 设置音频封面
+        if let coverImage = UIImage(named: "IMG_1187.JPG") {
+            let artwork = MPMediaItemArtwork(boundsSize: coverImage.size) { (size) -> UIImage in
+                return coverImage
+            }
+            mediaCenter.nowPlayingInfo?[MPMediaItemPropertyArtwork] = artwork
+        }
+        
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+    }
+    
+    func mPRemoteCommandCenterSet() {
+        // 设置远程控制命令
+        let commandCenter = MPRemoteCommandCenter.shared()
+        commandCenter.playCommand.addTarget {[weak self] event in
+            // 处理播放命令
+            self?.mPlayer.play()
+            return .success
+        }
+        commandCenter.pauseCommand.addTarget {[weak self] event in
+            // 处理暂停命令
+            self?.mPlayer.pause()
+            return .success
+        }
+        commandCenter.nextTrackCommand.addTarget {[weak self] event in
+            var index = self?.currIndex ?? 0
+            index = index + 1
+            if index <= 0 {
+                index = 0
+            }
+            self?.tableView(self!.mTableView, didSelectRowAt: IndexPath(row:index, section: 0))
+            return .success
+        }
+        
+        commandCenter.previousTrackCommand.addTarget {[weak self] event in
+            var index = self?.currIndex ?? 0
+            index = index - 1
+            if index <= 0 {
+                index = 0
+            }
+            self?.tableView(self!.mTableView, didSelectRowAt: IndexPath(row:index, section: 0))
+            return .success
+        }
     }
 
 }
