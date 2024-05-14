@@ -347,6 +347,9 @@ class MainViewController: ViewController, UITableViewDelegate, UITableViewDataSo
             mediaCenter.nowPlayingInfo?[MPMediaItemPropertyArtwork] = artwork
         }
         
+        let audioTime = YXFileManager.audioFileTime(model.ext) / 1000
+        mediaCenter.nowPlayingInfo?[MPMediaItemPropertyPlaybackDuration] = NSNumber(value: audioTime)
+        
         UIApplication.shared.beginReceivingRemoteControlEvents()
     }
     
@@ -380,6 +383,18 @@ class MainViewController: ViewController, UITableViewDelegate, UITableViewDataSo
                 index = 0
             }
             self?.tableView(self!.mTableView, didSelectRowAt: IndexPath(row:index, section: 0))
+            return .success
+        }
+        
+        commandCenter.changePlaybackPositionCommand.isEnabled = true
+        commandCenter.changePlaybackPositionCommand.addTarget {[weak self] event in
+            guard let event = event as? MPChangePlaybackPositionCommandEvent else {
+                return .commandFailed
+            }
+            
+            let time = CMTime(seconds: event.positionTime, preferredTimescale: 1)
+            self?.mPlayer.seek(to: time)
+            
             return .success
         }
     }

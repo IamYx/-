@@ -107,7 +107,7 @@
 }
 
 - (void)downloadFile {
-    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"地址" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"地址" message:@"抖音视频地址" preferredStyle:UIAlertControllerStyleAlert];
     [alertC shortShowAlert:@[@"地址"] actions:@"预览" vc:self actionBlock:^(NSInteger index, NSArray * _Nonnull values) {
         
         AddVideoViewController *vc = [[AddVideoViewController alloc] init];
