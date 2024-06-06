@@ -19,9 +19,9 @@
     model.author = [HtmlHandle stringContentWithString:html str1:@"author:\'" str2:@"\',"];
     
     //url
-    model.url = [HtmlHandle stringContentWithString:html str1:@"url: \'get_music.php?key=" str2:@"\',"];
-    model.url = [@"https://hifini.com/get_music.php?key=" stringByAppendingString:model.url];
-//    NSLog(@"=== %@", model.url);
+    model.url = [HtmlHandle stringContentWithString:html str1:@"url: \'get_music.php?key=" str2:@"\' +"];
+    model.url = [@"https://www.hifini.com/get_music.php?key=" stringByAppendingString:model.url];
+    model.pkey = [HtmlHandle stringContentWithString:html str1:@"generateParam(\'" str2:@"\'),"];
     
     //pic
     model.pic = [HtmlHandle stringContentWithString:html str1:@"pic: \'" str2:@"\'"];

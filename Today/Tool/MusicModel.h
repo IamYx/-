@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong)NSString *name;
 @property (nonatomic, strong)NSString *ext;
 @property (nonatomic, strong)NSString *url;
+@property (nonatomic, strong)NSString *pkey;
 
 + (instancetype)musicWithDict:(NSDictionary *)dict;
 - (NSDictionary *)toDictionary;

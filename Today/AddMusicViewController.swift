@@ -53,7 +53,19 @@ class AddMusicViewController: ViewController {
         webView.evaluateJavaScript("document.documentElement.outerHTML") {[weak self] html, error in
             if (error == nil) {
                 self?.musicModel = HtmlHandle.handleHtmlString(html as! String)
-                self?.downLoad()
+                let parameter = self?.musicModel.pkey;
+                let jsCall = "generateParam('\(parameter ?? "")');"
+                self?.webView.evaluateJavaScript(jsCall) { (result, error) in
+                    if let result = result {
+                        
+                        self?.musicModel.url = (self?.musicModel.url ?? "") + (result as! String)
+//                        print(self?.musicModel.url ?? "无")
+                        self?.downLoad()
+                        
+                    } else if let error = error {
+                        SVProgressHUD.showError(withStatus: error.localizedDescription)
+                    }
+                }
             } else {
                 SVProgressHUD.showError(withStatus: error?.localizedDescription)
             }
